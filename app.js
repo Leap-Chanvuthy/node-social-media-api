@@ -2,16 +2,22 @@ const express = require('express');
 const mongoose = require('mongoose');
 require('dotenv').config();
 const app = express();
+
+// Routes
 const blogRoute = require('./routes/blogRoute');
+const likeCommentRoute = require('./routes/likeCommentRoute');
 
 // middlewares
 app.use(express.json());
-app.use('/api/blog' , blogRoute);
+
+// blog routes
+app.use('/api/blogs' , blogRoute);
+app.use('/api/blogs' , likeCommentRoute);
 
 
 
 
-mongoose.connect(process.env.DB_URI , { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect(process.env.DB_URI );
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 db.once('open', () => {
