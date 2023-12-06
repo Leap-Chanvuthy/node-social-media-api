@@ -4,7 +4,7 @@ This api is built following with any other socail media such as facebook , insta
 
 __Technology and tools__
 - NodeJS and Express : A popular backend technologies use to built APIs.
-- MongoDB : Non relational database that use to store data.
+- Firebase : Non relational database that use to store data.
 - Postman : APIs Developement Environment (ADE) use to develope and test APIs.
 - VS Code : Popular IDE that use to develope software.
 
